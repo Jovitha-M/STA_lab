@@ -11,7 +11,7 @@ public class BookingPage {
 	public BookingPage(WebDriver driver) {
 		this.driver = driver;
 	}
-
+	
 	public void clickBookingButton() {
         driver.findElement(bookingButton).click();
     }

@@ -17,6 +17,7 @@ public class MainTest {
     private BookingPage bookingPage;
     private ConfirmationPage confirmPage;
     private RegisterPage registerPage;
+    private ProfilePage profilePage;
     
     @BeforeClass
     public void setUp() {
@@ -27,6 +28,7 @@ public class MainTest {
         bookingPage = new BookingPage(driver);
         confirmPage = new ConfirmationPage(driver);
         registerPage = new RegisterPage(driver);
+        profilePage = new ProfilePage(driver);
     }
 
     @DataProvider(name = "loginData")
@@ -50,8 +52,9 @@ public class MainTest {
 
     @Test(dataProvider = "registerData", priority=0)
     public void testRegister(String name, String username, String email, String password, String phone, int typeIndex) throws InterruptedException {
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/a")).click();
-        Thread.sleep(3000);
+    	Thread.sleep(3000);
+    	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/a")).click();
+    	Thread.sleep(1000);
         System.out.println("Entering the credentials for registration");
         registerPage.setName(name);
         registerPage.setUsername(username);
@@ -77,25 +80,60 @@ public class MainTest {
         System.out.println("After successful login, redirected to home");
     }
     
-    @Test(priority=2)
-    public void testBooking() throws InterruptedException{
-		Thread.sleep(2000);
-		System.out.println("Booking a service");
-    	bookingPage.clickBookingButton();
-		Thread.sleep(2000);
-        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/service");
-        System.out.println("List of services");
+    @DataProvider(name = "updateProfileData")
+    public Object[][] getUpdateData() {
+        return new Object[][] {
+            {"Jovitha Melcy", "jovi@gmail.com", "1234569874"}
+        };
+    }
+    
+    @Test(dataProvider = "updateProfileData", priority=2)
+    public void testUpdateProfile(String name, String email, String phone) throws InterruptedException{
+        driver.get(baseUrl + "/home");
         Thread.sleep(2000);
-        bookingPage.clickChooseServiceButton();
+        profilePage.clickProfileImage();
         Thread.sleep(2000);
-        System.out.println("Selecting the type of service");
-        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/service/workers");
-        System.out.println("Redirection to workers selection page");
+        profilePage.clickProfileLink();
         Thread.sleep(2000);
-        
+        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/profile");
+        Thread.sleep(2000);
+        profilePage.clickEditProfile();
+        Thread.sleep(2000);
+        profilePage.setName(name);
+        profilePage.setEmail(email);
+        profilePage.setPhone(phone);
+        Thread.sleep(2000);
+        profilePage.clickUpdateProfile();
+        Thread.sleep(2000);
+        profilePage.clickSaveProfile();
+        Thread.sleep(2000);
+        driver.get(baseUrl + "/profile");
+        Thread.sleep(2000);
+        Assert.assertEquals(profilePage.getName(), "Jovitha Melcy");
+        Assert.assertEquals(profilePage.getEmail(), "jovi@gmail.com");
+        Assert.assertEquals(profilePage.getPhone(), "1234569874");
+        Thread.sleep(2000);
     }
     
     @Test(priority=3)
+    public void testBooking() throws InterruptedException{
+		Thread.sleep(3000);
+		System.out.println("Booking a service");
+    	bookingPage.clickBookingButton();
+		Thread.sleep(1000);
+        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/service");
+        System.out.println("List of services");
+        Thread.sleep(1000);
+        bookingPage.clickChooseServiceButton();
+        Thread.sleep(1000);
+        System.out.println("Selecting the type of service");
+        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/service/workers");
+        System.out.println("Redirection to workers selection page");
+        Thread.sleep(1000);
+        
+    }
+    
+    @Test(priority=4)
     public void testBookingRequest() throws InterruptedException{
     	JavascriptExecutor js = (JavascriptExecutor)driver;
     	js.executeScript("scrollBy(0, 2500)");

@@ -5,7 +5,6 @@
     <classes>
       <class name="Customer.MainTest">
         <methods>
-          <include name="testBookingRequest"/>
           <include name="tearDown"/>
           <include name="testLogin" invocation-numbers="0 1"/>
           <include name="setUp"/>

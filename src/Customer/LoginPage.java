@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage {
     private WebDriver driver;
-    private By usernameInput = By.cssSelector("input[placeholder='Username']");
-    private By passwordInput = By.cssSelector("input[placeholder='Password']");
-    private By loginButton = By.xpath("//button[text()='Login']");
+    private By usernameInput = By.cssSelector("#root > div > div > label:nth-child(3) > input");
+    private By passwordInput = By.cssSelector("#root > div > div > label:nth-child(4) > input");
+    private By loginButton = By.xpath("//*[@id=\"root\"]/div/div/button");
     private By errorMessage = By.xpath("//div[@role='alert']");
     
     public LoginPage(WebDriver driver) {
