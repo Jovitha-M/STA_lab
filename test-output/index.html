@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\arulp\AppData\Local\Temp\testng-eclipse--600463587\testng-customsuite.xml</span>
+                    <span>C:\Users\jovit\AppData\Local\Temp\testng-eclipse--1293171159\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods, 5 failed,   4 passed</span>
+                    <span class="method-stats">9 methods, 2 failed,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,27 +103,12 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testLogin(jovi, jovi@123)">testLogin(jovi, jovi@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testLogin(Invalid, invalid)">testLogin(Invalid, invalid)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testLogin(arul, arul@123)">testLogin(arul, arul@123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testRegister(John Doe, John, john@doe.com, password123, 1234567890, 0)">testRegister(John Doe, John, john@doe.com, password123, 1234567890, 0)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testRegister(Invalid User, Invalid, invalid@email, invalid, 1234567890, 0)">testRegister(Invalid User, Invalid, invalid@email, invalid, 1234567890, 0)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testRegister(Jane Smith, Jane, jane@smith.com, password456, 0987654321, 0)">testRegister(Jane Smith, Jane, jane@smith.com, password456, 0987654321, 0)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testReview(4, Great service! Quick and professional.)">testReview(4, Great service! Quick and professional.)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -147,7 +132,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testLogin(Invalid, invalid)">testLogin(Invalid, invalid)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testLogin(jovi, jovi@123)">testLogin(jovi, jovi@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testPayment(1234 5678 1234 5643, 02/26, 152)">testPayment(1234 5678 1234 5643, 02/26, 152)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testRegister(Invalid User, , invalid@email, invalid, 1234567890, 0)">testRegister(Invalid User, , invalid@email, invalid, 1234567890, 0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Customer.MainTest" class="method navigator-link" hash-for-method="testRegister(Jane Smith, jane, jane@smith.com, jane@123, 0987654321, 1)">testRegister(Jane Smith, jane, jane@smith.com, jane@123, 0987654321, 1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -175,195 +175,19 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin(jovi, jovi@123)">
-                  </a> <!-- testLogin(jovi, jovi@123) -->
+                  <a name="testLogin(Invalid, invalid)">
+                  </a> <!-- testLogin(Invalid, invalid) -->
                   <span class="method-name">testLogin</span>
-                  <span class="parameters">(jovi,jovi@123)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [http://localhost:5173/home] but found [http://localhost:5173/]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Customer.MainTest.testLogin(MainTest.java:79)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLogin(arul, arul@123)">
-                  </a> <!-- testLogin(arul, arul@123) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(arul,arul@123)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [http://localhost:5173/home] but found [http://localhost:5173/]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Customer.MainTest.testLogin(MainTest.java:79)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testRegister(John Doe, John, john@doe.com, password123, 1234567890, 0)">
-                  </a> <!-- testRegister(John Doe, John, john@doe.com, password123, 1234567890, 0) -->
-                  <span class="method-name">testRegister</span>
-                  <span class="parameters">(John Doe,John,john@doe.com,password123,1234567890,0)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [http://localhost:5173] but found [http://localhost:5173/register]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Customer.MainTest.testRegister(MainTest.java:67)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testRegister(Invalid User, Invalid, invalid@email, invalid, 1234567890, 0)">
-                  </a> <!-- testRegister(Invalid User, Invalid, invalid@email, invalid, 1234567890, 0) -->
-                  <span class="method-name">testRegister</span>
-                  <span class="parameters">(Invalid User,Invalid,invalid@email,invalid,1234567890,0)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [http://localhost:5173] but found [http://localhost:5173/register]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Customer.MainTest.testRegister(MainTest.java:67)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testRegister(Jane Smith, Jane, jane@smith.com, password456, 0987654321, 0)">
-                  </a> <!-- testRegister(Jane Smith, Jane, jane@smith.com, password456, 0987654321, 0) -->
-                  <span class="method-name">testRegister</span>
-                  <span class="parameters">(Jane Smith,Jane,jane@smith.com,password456,0987654321,0)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#root &gt; div &gt; div &gt; label:nth-child(6) &gt; input&quot;}
-  (Session info: chrome=124.0.6367.61)
+                  <span class="parameters">(Invalid,invalid)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#root &gt; div &gt; div &gt; label:nth-child(3) &gt; input&quot;}
+  (Session info: chrome=124.0.6367.91)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5ab5dfa10c6ed0185e02be0021e0b399, findElement {using=css selector, value=#root &gt; div &gt; div &gt; label:nth-child(6) &gt; input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\arulp\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56728}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56728/devtoo..., se:cdpVersion: 124.0.6367.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ab5dfa10c6ed0185e02be0021e0b399
+Command: [19fceac3b6a74d2a9783719c8bf4bd1b, findElement {using=css selector, value=#root &gt; div &gt; div &gt; label:nth-child(3) &gt; input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\jovit\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54351/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 19fceac3b6a74d2a9783719c8bf4bd1b
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -378,8 +202,52 @@ Session ID: 5ab5dfa10c6ed0185e02be0021e0b399
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at Customer.RegisterPage.setEmail(RegisterPage.java:63)
-	at Customer.MainTest.testRegister(MainTest.java:61)
+	at Customer.LoginPage.setUsername(LoginPage.java:19)
+	at Customer.MainTest.testLogin(MainTest.java:101)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testReview(4, Great service! Quick and professional.)">
+                  </a> <!-- testReview(4, Great service! Quick and professional.) -->
+                  <span class="method-name">testReview</span>
+                  <span class="parameters">(4,Great service! Quick and professional.)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Paid] but found [Pending]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at Customer.MainTest.testReview(MainTest.java:219)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -434,10 +302,34 @@ Session ID: 5ab5dfa10c6ed0185e02be0021e0b399
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin(Invalid, invalid)">
-                  </a> <!-- testLogin(Invalid, invalid) -->
+                  <a name="testLogin(jovi, jovi@123)">
+                  </a> <!-- testLogin(jovi, jovi@123) -->
                   <span class="method-name">testLogin</span>
-                  <span class="parameters">(Invalid,invalid)</span>
+                  <span class="parameters">(jovi,jovi@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPayment(1234 5678 1234 5643, 02/26, 152)">
+                  </a> <!-- testPayment(1234 5678 1234 5643, 02/26, 152) -->
+                  <span class="method-name">testPayment</span>
+                  <span class="parameters">(1234 5678 1234 5643,02/26,152)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegister(Invalid User, , invalid@email, invalid, 1234567890, 0)">
+                  </a> <!-- testRegister(Invalid User, , invalid@email, invalid, 1234567890, 0) -->
+                  <span class="method-name">testRegister</span>
+                  <span class="parameters">(Invalid User,,invalid@email,invalid,1234567890,0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegister(Jane Smith, jane, jane@smith.com, jane@123, 0987654321, 1)">
+                  </a> <!-- testRegister(Jane Smith, jane, jane@smith.com, jane@123, 0987654321, 1) -->
+                  <span class="method-name">testRegister</span>
+                  <span class="parameters">(Jane Smith,jane,jane@smith.com,jane@123,0987654321,1)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -453,7 +345,7 @@ Session ID: 5ab5dfa10c6ed0185e02be0021e0b399
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\arulp\AppData\Local\Temp\testng-eclipse--600463587\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\jovit\AppData\Local\Temp\testng-eclipse--1293171159\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -506,39 +398,39 @@ data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testUpdateProfile')
 data.setCell(0, 2, 'Customer.MainTest')
-data.setCell(0, 3, 20878);
+data.setCell(0, 3, 21249);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testBookingRequest')
+data.setCell(1, 1, 'testReview')
 data.setCell(1, 2, 'Customer.MainTest')
-data.setCell(1, 3, 11170);
+data.setCell(1, 3, 13520);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testRegister')
+data.setCell(2, 1, 'testPayment')
 data.setCell(2, 2, 'Customer.MainTest')
-data.setCell(2, 3, 7651);
+data.setCell(2, 3, 11610);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testRegister')
+data.setCell(3, 1, 'testBookingRequest')
 data.setCell(3, 2, 'Customer.MainTest')
-data.setCell(3, 3, 7618);
+data.setCell(3, 3, 11248);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testBooking')
+data.setCell(4, 1, 'testRegister')
 data.setCell(4, 2, 'Customer.MainTest')
-data.setCell(4, 3, 7117);
+data.setCell(4, 3, 7971);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'testRegister')
 data.setCell(5, 2, 'Customer.MainTest')
-data.setCell(5, 3, 4238);
+data.setCell(5, 3, 7830);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testLogin')
+data.setCell(6, 1, 'testBooking')
 data.setCell(6, 2, 'Customer.MainTest')
-data.setCell(6, 3, 3231);
+data.setCell(6, 3, 7163);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testLogin')
 data.setCell(7, 2, 'Customer.MainTest')
-data.setCell(7, 3, 3191);
+data.setCell(7, 3, 3233);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'testLogin')
 data.setCell(8, 2, 'Customer.MainTest')
-data.setCell(8, 3, 3187);
+data.setCell(8, 3, 20);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -575,54 +467,48 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testRegister(John Doe, John, john@doe.com, password123, 1234567890, 0)</span>
-                <span class="method-start">1611 ms</span>
+                <span class="method-name">testRegister(Jane Smith, jane, jane@smith.com, jane@123, 0987654321, 1)</span>
+                <span class="method-start">1714 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testRegister(Jane Smith, Jane, jane@smith.com, password456, 0987654321, 0)</span>
-                <span class="method-start">9267 ms</span>
+                <span class="method-name">testRegister(Invalid User, , invalid@email, invalid, 1234567890, 0)</span>
+                <span class="method-start">9687 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testRegister(Invalid User, Invalid, invalid@email, invalid, 1234567890, 0)</span>
-                <span class="method-start">13508 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testLogin(arul, arul@123)</span>
-                <span class="method-start">21131 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testLogin(jovi, jovi@123)</span>
-                <span class="method-start">24365 ms</span>
+                <span class="method-start">17517 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testLogin(Invalid, invalid)</span>
-                <span class="method-start">27554 ms</span>
+                <span class="method-start">20750 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUpdateProfile(Jovitha Melcy, jovi@gmail.com, 1234569874)</span>
-                <span class="method-start">30747 ms</span>
+                <span class="method-start">20770 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testBooking</span>
-                <span class="method-start">51626 ms</span>
+                <span class="method-start">42019 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testBookingRequest</span>
-                <span class="method-start">58745 ms</span>
+                <span class="method-start">49182 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPayment(1234 5678 1234 5643, 02/26, 152)</span>
+                <span class="method-start">60435 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testReview(4, Great service! Quick and professional.)</span>
+                <span class="method-start">72045 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">69916 ms</span>
+                <span class="method-start">85570 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

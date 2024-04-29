@@ -5,10 +5,10 @@
     <classes>
       <class name="Customer.MainTest">
         <methods>
+          <include name="testReview" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="testLogin" invocation-numbers="0 1"/>
           <include name="setUp"/>
-          <include name="testRegister" invocation-numbers="0 1 2"/>
+          <include name="testLogin" invocation-numbers="1"/>
         </methods>
       </class> <!-- Customer.MainTest -->
     </classes>

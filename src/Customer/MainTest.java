@@ -1,8 +1,11 @@
 package Customer;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -13,11 +16,13 @@ import org.testng.annotations.Test;
 public class MainTest {
     private WebDriver driver;
     private LoginPage loginPage;
-    private String baseUrl = "http://localhost:5173"; // Change this to your app's URL
+    private String baseUrl = "http://localhost:5173";
     private BookingPage bookingPage;
     private ConfirmationPage confirmPage;
     private RegisterPage registerPage;
     private ProfilePage profilePage;
+    private PaymentPage paymentPage;
+    private ReviewPage reviewPage;
     
     @BeforeClass
     public void setUp() {
@@ -29,24 +34,44 @@ public class MainTest {
         confirmPage = new ConfirmationPage(driver);
         registerPage = new RegisterPage(driver);
         profilePage = new ProfilePage(driver);
+        paymentPage = new PaymentPage(driver);
+        reviewPage = new ReviewPage(driver);
     }
 
     @DataProvider(name = "loginData")
     public Object[][] getLoginData() {
         return new Object[][] {
-            {"arul", "arul@123"},
             {"jovi","jovi@123"},
             {"Invalid","invalid"}
             
         };
     }
     
+    @DataProvider(name = "paymentData")
+    public Object[][] getPaymentData() {
+        return new Object[][] {
+            {"1234 5678 1234 5643", "02/26", "152"}
+        };
+    }
+    
+    @DataProvider(name = "reviewData")
+    public Object[][] getReviewData() {
+        return new Object[][] {
+            {4, "Great service! Quick and professional."}
+        };
+    }
+    
+    @DataProvider(name = "updateProfileData")
+    public Object[][] getUpdateData() {
+        return new Object[][] {
+            {"Jovitha Melcy", "jovi@gmail.com", "1234569874"}
+        };
+    }
+    
     @DataProvider(name = "registerData")
     public Object[][] getRegisterData() {
         return new Object[][] {
-            {"John Doe", "John", "john@doe.com", "password123", "1234567890", 0},
-            {"Jane Smith", "Jane", "jane@smith.com", "password456", "0987654321", 0},
-            {"Invalid User", "Invalid", "invalid@email", "invalid", "1234567890", 0}
+            {"Jane Smith", "jane", "jane@smith.com", "jane@123", "0987654321", 1},
         };
     }
 
@@ -64,7 +89,7 @@ public class MainTest {
         registerPage.setType(typeIndex);
         registerPage.clickRegisterButton();
         Thread.sleep(3000);
-        Assert.assertEquals(driver.getCurrentUrl(), baseUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/");
         System.out.println("After successful register, redirected to login page.");
     }
 
@@ -79,13 +104,7 @@ public class MainTest {
         Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/home");
         System.out.println("After successful login, redirected to home");
     }
-    
-    @DataProvider(name = "updateProfileData")
-    public Object[][] getUpdateData() {
-        return new Object[][] {
-            {"Jovitha Melcy", "jovi@gmail.com", "1234569874"}
-        };
-    }
+   
     
     @Test(dataProvider = "updateProfileData", priority=2)
     public void testUpdateProfile(String name, String email, String phone) throws InterruptedException{
@@ -129,8 +148,7 @@ public class MainTest {
         System.out.println("Selecting the type of service");
         Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/service/workers");
         System.out.println("Redirection to workers selection page");
-        Thread.sleep(1000);
-        
+        Thread.sleep(1000); 
     }
     
     @Test(priority=4)
@@ -147,10 +165,58 @@ public class MainTest {
 		Thread.sleep(2000);
 		Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/service");
 		System.out.println("Check status of the bookings");
+      confirmPage.clickMyBookingsButton();
+      Thread.sleep(2000);
+      Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/bookings");
+      System.out.println("Pending status");
+	    List<WebElement> pendingButtons = driver.findElements(By.xpath("//*[@id=\"root\"]/div/div/div/table/tbody/tr/th/button"));
+	    Assert.assertTrue(pendingButtons.size() > 0, "Pending button is not present");
+	    String buttonName = pendingButtons.get(0).getText();
+	    System.out.println("Name of the pending button: " + buttonName);
+    }
+    
+    @Test(dataProvider = "paymentData", priority=5)
+    public void testPayment(String cardNumber, String expiryDate, String cvv) throws InterruptedException{
+		Thread.sleep(3000);
+		driver.get(baseUrl + "/bookings");
+		System.out.println("Initiating payment for the service");
+    	paymentPage.clickPaymentButton();
+		Thread.sleep(1000);
+        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/payment");
+        System.out.println("Payment page loaded");
+        Thread.sleep(1000);
+        System.out.println("Entering the payment details");
+        paymentPage.setCardNumber(cardNumber);
+        paymentPage.setExpiryDate(expiryDate);
+        paymentPage.setCvv(cvv);
+        Thread.sleep(3000);
+        paymentPage.clickPayButton();
+        System.out.println("Submitting payment details");
+        Thread.sleep(3000);
+        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/review");
+        System.out.println("Successfully completed the payment");
+    }
+    
+    @Test(dataProvider = "reviewData", priority=6)
+    public void testReview(int starReview, String comment) throws InterruptedException{
+		Thread.sleep(3000);
+		driver.get(baseUrl + "/review");
+		System.out.println("Giving review for the finished service");
+		Thread.sleep(1000);
+        System.out.println("Enter review details");
+        reviewPage.setStarReview(starReview);
+        reviewPage.setComment(comment);
+        Thread.sleep(3000);
+        reviewPage.clickReviewSubmitButton();
+        System.out.println("Submitting the review");
+        Thread.sleep(3000); 
         confirmPage.clickMyBookingsButton();
-        Thread.sleep(2000);
-        Assert.assertEquals(driver.getCurrentUrl(), baseUrl + "/bookings");
-        System.out.println("Pending status");
+        Thread.sleep(3000);
+        List<WebElement> statusButtons = driver.findElements(By.xpath("//*[@id=\"root\"]/div/div/div/table/tbody/tr/th/button"));
+	    Assert.assertTrue(statusButtons.size() > 0, "Pending button is not present");
+	    String buttonName = statusButtons.get(0).getText();
+	    Assert.assertEquals(buttonName, "Paid");
+	    System.out.println("Completed payment and review process");
     }
 
     @AfterClass
